@@ -1,0 +1,53 @@
+Project By:   Simon de Sancha 	ID: 400045866
+(Done alone)
+
+Compilation:
+	make
+
+Usage:
+                Left-clicking and drag to move camera
+                Right-click to enable object action
+                Arrow buttons to walk around map
+ 		Space to jump
+
+
+My project is a 3D simulation of a house and property. 
+
+All objects are loaded from Wavefront .obj files (along with materials/textures from .mtl files). Custom loader written to load these. Objects where edited/created in Blender (an open-source modelling program). Model credits are listed below.
+
+Full-featured scene-graph; all objects, polygon meshes, lights, animation represented as a node.
+
+Animated sun/moon orbits, as well as day/night lighting.
+
+Animation when walking, the player bobs up and down and the walking is done in discrete steps. Animated jumping.
+
+Right-click the button on the floor to switch on/off the ceiling light. Ceiling light is animated.
+
+Collision detection stops the player passing through walls, doors and the fence. The player must jump the fence. Right-click on the door to open. Door opening animation.
+
+All code written modularly - all code past the initialisation.cpp is written such that it can be used dynamically, i.e. to add a shape all that is needed is a single loadObjMesh(..) call in the initialisation code, or for a light, a single addLight(..), a door a single addDoor(..), etc. 
+
+Framerate limited to 30fps.
+
+Sweet cow backdrop.
+
+Warning on compilation are all non-static initializers and extended-list initializers, all safe in C++11.
+
+
+
+
+I put many hours into this - I had to do it alone as I am an exchange student with no connections to the co-hort. I understand that it must be marked as a 2-person group but I believe the final result is still satisfactory.
+
+
+
+
+
+
+Credits:
+
+LodePNG: Copyright (c) 2005-2015 Lode Vandevenne
+TGALoader: Author:	Jan Krassnigg (Jan@Krassnigg.de)
+
+All models explicitly state that they allow free usage.
+
+
